@@ -49,6 +49,30 @@ var audio = $("#soundclip")[0];
 		}, 1000);
 	}
 
+	// Hide settings by default 
+	$('#preferences').hide();
+
+	// When 'gear' is clicked, show settings
+	$("#settings").click(function() {
+		clearInterval(interval);
+		$("body").css("background-color", "white");
+		$(".btn").css("background-color", "#595959");
+		$(".fa").css("color", "white");
+		$('#preferences').toggle("fade"); 
+	});
+
+	// Reset clock 
+	$("#reset").click(function() {
+		clearInterval(interval);
+		currentMinutes = $("#minute-settings").val();
+		$("#timer").html(currentMinutes + ":00");
+		$("body").css("background-color", "white");
+		$("h1").css("color", "#C05746");
+		$(".btn").css("background-color", "#595959");
+		$(".btn").css("color", "#C05746");
+		$(".fa").css("color", "white");
+	});						
+			
 
 	// When play button is clicked, start the countdown
 	$("#start").click(function(e) {
@@ -79,17 +103,6 @@ var audio = $("#soundclip")[0];
 	});	
 
 
-	// Hide settings by default 
-	$('#preferences').hide();
-
-	// When 'gear' is clicked, show settings
-	$("#settings").click(function() {
-		clearInterval(interval);
-		$("body").css("background-color", "white");
-		$(".btn").css("background-color", "#595959");
-		$(".fa").css("color", "white");
-		$('#preferences').toggle("fade"); 
-	});
 
 	// Session Settings
 	$("#decrease").click(function() {
@@ -126,16 +139,7 @@ var audio = $("#soundclip")[0];
 		};
 	}); 
 
-	// Reset clock 
-	$("#reset").click(function() {
-		clearInterval(interval);
-		currentMinutes = $("#minute-settings").val();
-		$("#timer").html(currentMinutes + ":00");
-		$("body").css("background-color", "white");
-		$(".btn").css("color", "#C05746");
-		$(".fa").css("color", "white");
-	});						
-				
+	
 
 
 });
