@@ -86,6 +86,7 @@ var audio = $("#soundclip")[0];
 	$("#settings").click(function() {
 		clearInterval(interval);
 		$("body").css("background-color", "white");
+		$(".fa").css("color", "white");
 		$('#preferences').toggle("fade"); 
 	});
 
