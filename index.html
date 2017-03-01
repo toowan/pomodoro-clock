@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>pomodoro</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="js/javascript.js"></script>
+    <audio id="soundclip">
+    <source src="http://www.wavsource.com/snds_2017-02-05_1692732105491832/sfx/alarm_beep.wav"></source>
+	</audio>
+</head>
+
+<body>
+	<h1>pomodoro</h1>
+	<div class="container">
+		<div class="clock">
+		<span id="timer">25:00</span>
+		</div>
+
+		<div class="menu">
+			<button class="btn" id="start"><i class="fa fa-play"></i></button>
+			<button class="btn" id="pause"><i class="fa fa-pause"></i></button>
+			<button class="btn" id="reset"><i class="fa fa-refresh"></i></button>
+			<button class="btn" id="settings"><i class="fa fa-cog"></i></button>
+		</div>
+	</div>
+
+	<div class="preferences container-fluid" id="preferences">
+       <div class="session-settings">
+       <p>Session Length: &nbsp;&nbsp;  
+       <span><button id="decrease"><i class="fa fa-caret-down fa-2x"></i></span></button>&nbsp;
+       <input id="minute-settings" value="25">&nbsp;
+       <span><button id="increase"><i class="fa fa-caret-up fa-2x"></i></button></span>
+       </p>
+       </div>
+    </div>
+
+    <footer class="site-footer">
+        <p><a href="https://github.com/toowan/" target="_blank">toowan</a> &copy; 2017</p>
+    </footer>
+
+</body>
+</html>
