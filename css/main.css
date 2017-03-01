@@ -50,6 +50,7 @@ a {
 
 .btn:hover {
 	background-color: #C05746 !important;
+	color: white !important;
 }
 
 .btn:active:focus, .btn:focus {

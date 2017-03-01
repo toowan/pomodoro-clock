@@ -78,9 +78,9 @@ var audio = $("#soundclip")[0];
 		e.preventDefault();
 		countdown(); 
 		$('#preferences').hide();
+		$("h1").css("color", "white");
 		$("body").css("background-color", "#C6DD99");
 		$(".fa").css("color", "#595959");
-		$("h1").css("color", "white");
 		$(".btn").css("background-color", "white");
 
 	});	
