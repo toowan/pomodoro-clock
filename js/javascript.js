@@ -69,7 +69,6 @@ var audio = $("#soundclip")[0];
 		$("body").css("background-color", "white");
 		$("h1").css("color", "#C05746");
 		$(".btn").css("background-color", "#595959");
-		$(".btn").css("color", "#C05746");
 		$(".fa").css("color", "white");
 	});						
 			
