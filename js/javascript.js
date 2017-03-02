@@ -34,6 +34,7 @@ var audio = $("#soundclip")[0];
 		    	seconds = '0' + seconds;
 		    }
 		    
+		    // Display updated time as it's counting down
 		    $('#timer').html(minutes + ':' + seconds);
 
 		    // Stops countdown when both minutes and seconds are at 0. 
@@ -106,8 +107,6 @@ var audio = $("#soundclip")[0];
 		}
 
 	});	
-
-
 
 	// Session Settings
 	$("#decrease").click(function() {
