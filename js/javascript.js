@@ -37,8 +37,9 @@ var audio = $("#soundclip")[0];
 		    $('#timer').html(minutes + ':' + seconds);
 
 		    // Stops countdown when both minutes and seconds are at 0. 
-		    if (minutes === 0 && seconds === 0) 
+		    if (minutes === 0 && seconds === 0) {
 		        clearInterval(interval);
+		    }
 
 			// When timer displays "00:00" (This has to be inside countdown function)
 		    if ($("#timer").html() === "00:00") {
