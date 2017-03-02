@@ -15,35 +15,40 @@ var audio = $("#soundclip")[0];
 
 		    // Decrement seconds by 1 while clock isn't 00:00
 		    if ($('#timer').html() !== "00:00") {
-		    	seconds -= 1;
+		    	seconds--;
 		    }
 
-
-		    if (minutes < 10 && minutes.length != 2) {
-		    	minutes = '0' + minutes;
-		    }
-
+		    // When clock is at "minutes:00" 
 		    if (minutes >=1 && seconds < 0) {
 		        minutes -= 1;
 		        seconds = 59;
 		    }
-		    else if (seconds < 10) 
+
+		    // When clock is at single digit minute, add a 0 in front of it
+		    if (minutes < 10) {
+		    	minutes = '0' + minutes;
+		    }
+
+		    // When clock is at single digit second, add a 0 in front of it
+		    if (seconds < 10) {
 		    	seconds = '0' + seconds;
-		    	$('#timer').html(minutes + ':' + seconds);
+		    }
+		    
+		    $('#timer').html(minutes + ':' + seconds);
 
-			    // Stops countdown when both minutes and seconds are at 0. 
-			    if (minutes === 0 && seconds === 0) 
-			        clearInterval(interval);
+		    // Stops countdown when both minutes and seconds are at 0. 
+		    if (minutes === 0 && seconds === 0) 
+		        clearInterval(interval);
 
-				// When timer displays "00:00" (This has to be inside countdown function)
-			    if ($("#timer").html() === "00:00") {
-			    	$("body").css("background-color", "#C05746"); // red
-			    	$("body").css("color", "#595959");
-			    	$("h1").css("color", "white");
-			    	$(".btn").css("background-color", "white");
-			    	$(".fa").css("color", "#C05746"); // red
-			    	audio.play();
-				}
+			// When timer displays "00:00" (This has to be inside countdown function)
+		    if ($("#timer").html() === "00:00") {
+		    	$("body").css("background-color", "#C05746"); // red
+		    	$("body").css("color", "#595959");
+		    	$("h1").css("color", "white");
+		    	$(".btn").css("background-color", "white");
+		    	$(".fa").css("color", "#C05746"); // red
+		    	audio.play();
+			}
 
 
 		}, 1000);
